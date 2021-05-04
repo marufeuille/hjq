@@ -1,7 +1,8 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Data.Hjq (
-    parseJqFilter
 ) where
-import Data.Hjq.Parser (JqFilter(JqField, JqIndex, JqNil))
+import qualified Data.Text as T
+import Control.Applicative
+import Data.Attoparsec.Text
+import Data.Text.IO
 
-parseJqFilter :: String -> Either String JqFilter
-parseJqFilter _ = Right JqNil
